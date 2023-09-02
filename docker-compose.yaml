@@ -23,6 +23,8 @@ services:
       - node-network
     volumes:
       - ./node:/usr/src/app
+    command: >
+      sh -c "npm install && npm start"
     tty: true
     depends_on:
       - db
